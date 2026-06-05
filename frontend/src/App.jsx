@@ -16,7 +16,15 @@ function ProtectedRoute({ children, requiredRole }) {
 }
 
 export default function App() {
-  const { isAuthenticated, isAdmin } = useAuth();
+  const { isAuthenticated, isAdmin, loading } = useAuth();
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen bg-gray-50">
+        <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-[#4ADE80]"></div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-gray-100 font-sans">
