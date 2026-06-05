@@ -33,7 +33,7 @@ class Settings(BaseSettings):
     ENV: str = "development"
     LOG_LEVEL: str = "INFO"
     GYM_NAME: str = "S2T Fitness Studio"
-    ALLOWED_ORIGINS: list[str] = ["http://localhost:5173"]
+    ALLOWED_ORIGINS: str | list[str] = ["http://localhost:5173"]
 
     # ── Brute-force protection ─────────────────────────────────────────────
     MAX_LOGIN_ATTEMPTS: int = 5
