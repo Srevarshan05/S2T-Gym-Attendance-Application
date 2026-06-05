@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import QRCode from "qrcode";
 
-const CHECKIN_URL_PROD = "https://s2tfitness.in/checkin";
+const CHECKIN_URL_PROD = `${window.location.origin}/checkin`;
 const CHECKIN_URL_DEV = `${window.location.protocol}//${window.location.hostname}:5173/checkin`;
 
 export default function QRGenerator() {
